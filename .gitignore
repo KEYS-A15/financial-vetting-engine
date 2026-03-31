@@ -8,3 +8,12 @@ wheels/
 
 # Virtual environments
 .venv
+
+## Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# statements
+tests/sample_statements/
