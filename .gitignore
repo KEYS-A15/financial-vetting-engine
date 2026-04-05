@@ -4,16 +4,28 @@ __pycache__/
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
 
 # Virtual environments
-.venv
+.venv/
 
-## Jupyter Notebook checkpoints
+# Environment variables
+.env
+
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints
 
 # VS Code settings
 .vscode/
 
-# statements
-tests/sample_statements/
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temp dir used by the server
+/tmp/fve/
+
+# PDFs — do not commit real statements; synthetic test samples are allowed
+*.pdf
+tests/sample_statements/*

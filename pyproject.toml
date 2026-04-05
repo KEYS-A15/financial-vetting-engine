@@ -1,7 +1,7 @@
 [project]
 name = "financial-vetting-engine"
 version = "0.1.0"
-description = "Add your description here"
+description = "Open-source financial document analysis engine for US bank statements and pay stubs"
 readme = "README.md"
 authors = [
     { name = "shrey.gajjar", email = "shreydotgajjar@gmail.com" }
@@ -29,4 +29,21 @@ build-backend = "uv_build"
 dev = [
     "httpx>=0.28.1",
     "pytest>=9.0.2",
+    "pytest-cov>=7.1.0",
+    "reportlab>=4.4.10",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
